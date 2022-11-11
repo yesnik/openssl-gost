@@ -24,6 +24,18 @@ docker build -t openssl-gost-local .
    * Комментируем костыль, который для нашей сборки не актуален:
      ```
      [ ! -d /usr/include/curl ]; then \
-	   ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; \
+       ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; \
      fi; \
      ```
+3. Копируем вспомогательные скрипты из официального [репозитория PHP-FPM](https://github.com/docker-library/php/tree/master/8.1/buster/fpm)
+  в папку `php-fpm-gost`:
+   * docker-php-entrypoint
+   * docker-php-ext-configure
+   * docker-php-ext-enable
+   * docker-php-ext-install
+   * docker-php-source
+4. Даем этим скриптам права на выполнение:
+   ```
+   cd php-fpm-gost
+   chmod +x docker-php-*
+   ```
