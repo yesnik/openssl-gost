@@ -20,3 +20,4 @@ docker build -t openssl-gost-local .
      - `curl`
      - `libcurl4-openssl-dev` 
      - `libssl-dev`
+   * Меняем опцию для openssl: `--with-openssl=/usr/local/ssl`

@@ -156,7 +156,7 @@ RUN set -eux; \
 		\
 		--with-curl \
 		--with-iconv \
-		--with-openssl \
+		--with-openssl=/usr/local/ssl \
 		--with-readline \
 		--with-zlib \
 		\
