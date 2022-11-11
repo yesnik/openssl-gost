@@ -21,3 +21,9 @@ docker build -t openssl-gost-local .
      - `libcurl4-openssl-dev` 
      - `libssl-dev`
    * Меняем опцию для openssl: `--with-openssl=/usr/local/ssl`
+   * Комментируем костыль, который для нашей сборки не актуален:
+     ```
+     [ ! -d /usr/include/curl ]; then \
+	   ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; \
+     fi; \
+     ```
