@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM debian:buster-slim
+FROM openssl-gost-local
 
 # prevent Debian's PHP packages from being installed
 # https://github.com/docker-library/php/pull/542
