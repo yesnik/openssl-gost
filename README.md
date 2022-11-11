@@ -15,3 +15,8 @@ docker build -t openssl-gost-local .
   туда содержимое официального [образа PHP-FPM](https://raw.githubusercontent.com/docker-library/php/master/8.1/buster/fpm/Dockerfile)
 2. Вносим в файл изменения:
    * Собираем на основе `openssl-gost-local`
+   * Комментируем команды по установке библиотек, т.к. они уже установлены в нашем базовом образе:
+     - `ca-certificates`
+     - `curl`
+     - `libcurl4-openssl-dev` 
+     - `libssl-dev`

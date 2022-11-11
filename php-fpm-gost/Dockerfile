@@ -33,8 +33,8 @@ RUN set -eux; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
 		$PHPIZE_DEPS \
-		ca-certificates \
-		curl \
+#		ca-certificates \
+#		curl \
 		xz-utils \
 	; \
 	rm -rf /var/lib/apt/lists/*
@@ -103,12 +103,12 @@ RUN set -eux; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
 		libargon2-dev \
-		libcurl4-openssl-dev \
+#		libcurl4-openssl-dev \
 		libonig-dev \
 		libreadline-dev \
 		libsodium-dev \
 		libsqlite3-dev \
-		libssl-dev \
+#		libssl-dev \
 		libxml2-dev \
 		zlib1g-dev \
 	; \
