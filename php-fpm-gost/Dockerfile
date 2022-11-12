@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM openssl-gost-local
+FROM yesnik/openssl-gost:1.0
 
 # prevent Debian's PHP packages from being installed
 # https://github.com/docker-library/php/pull/542
